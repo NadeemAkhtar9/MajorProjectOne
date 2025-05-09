@@ -7,7 +7,7 @@ import useFetch from "./hooks/useFetch";
 import Cart from "./pages/Cart";
 import { useState } from "react";
 import Wishlist from "./pages/Wishlist";
-import UserProfile from "./pages/userProfile";
+import UserProfile from "./pages/UserProfile";
 import CheckoutPage from "./pages/CheckoutPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
