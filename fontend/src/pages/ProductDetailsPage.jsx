@@ -13,7 +13,7 @@ const ProductDetailsPage = () => {
   if (loading) return <p className="text-center">Loading product details...</p>;
   if (error) return <p className="text-center">Error fetching product details: {error}</p>;
 
-  //  Ensure product is defined before accessing properties
+  
   if (!product) return <p className="text-center">Product not found.</p>;
 
   return (
@@ -21,7 +21,7 @@ const ProductDetailsPage = () => {
     <Header />
     <div className="container my-4">
       <div className="row">
-        {/*  Left Side - Product Image */}
+       
         <div className="col-md-6">
           {product.imageUrl ? (
             <img
@@ -35,7 +35,7 @@ const ProductDetailsPage = () => {
           )}
         </div>
 
-        {/*  Right Side - Product Details */}
+       
         <div className="col-md-6">
           <h2>{product.name || "No name available"}</h2>
           <p className="text-muted">{product.description || "No description available"}</p>

@@ -12,7 +12,7 @@ const Cart = () => {
     const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
     const handlePlaceOrder = () => {
-        localStorage.setItem("cartItems", JSON.stringify([])); // ✅ Clear Cart
+        localStorage.setItem("cartItems", JSON.stringify([])); 
         alert("Redirecting to Checkout...");
         navigate("/checkout");
     };

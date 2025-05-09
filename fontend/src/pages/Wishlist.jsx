@@ -12,27 +12,27 @@ const Wishlist = () => {
             <div className="container my-4">
                 <h2 className="text-center">Your Wishlist</h2>
 
-                {/* Wishlist Items in a Row */}
+                
                 <div className="row">
                     {wishlistItems.length > 0 ? (
                         wishlistItems.map((product) => (
                             <div key={product._id} className="col-md-3 mb-4">
                                 <div className="card h-100 d-flex flex-column justify-content-between"> 
-                                    {/* Product Image - Fixed to Top */}
+                                    
                                     <img
                                         src={product.imageUrl}
                                         alt={product.name}
                                         className="card-img-top"
-                                        style={{ height: "250px", objectFit: "cover" }} // Full Card Image
+                                        style={{ height: "250px", objectFit: "cover" }} 
                                     />
 
-                                    {/* Product Details - Fixed to Bottom */}
+                                    
                                     <div className="card-body text-center">
                                         <h5>{product.name}</h5>
                                         <p><strong>Price:</strong> ₹{product.price}</p>
                                     </div>
 
-                                    {/* Action Buttons - Fixed Bottom */}
+                                   
                                     <div className="p-3">
                                         <button 
                                             onClick={() => addToCart(product)} 

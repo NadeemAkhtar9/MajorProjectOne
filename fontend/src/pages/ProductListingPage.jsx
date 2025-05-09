@@ -28,7 +28,7 @@ const ProductListingPage = () => {
         setMinRating(0);
         setSortBy("");
         setSelectedSubCategories([]);
-        setSearchQuery(""); //  Clear search query
+        setSearchQuery(""); 
     };
 
     if (loading) return <p className="text-center">Loading products...</p>;
@@ -40,9 +40,8 @@ const ProductListingPage = () => {
         const matchCategory = product.categories && product.categories._id === categoryId;
         const matchRating = product.rating ? product.rating >= minRating : true;
         const matchSubCategory = selectedSubCategories.length === 0 || selectedSubCategories.includes(product.subCategories);
-        const matchSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()); //  Search query check
-
-        return matchCategory && matchRating && matchSubCategory && matchSearch; //  Combine all filters
+        const matchSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()); 
+        return matchCategory && matchRating && matchSubCategory && matchSearch;
     });
 
     if (sortBy === "low-to-high") {
@@ -53,11 +52,11 @@ const ProductListingPage = () => {
 
     return (
         <>
-            {/*  Pass Search Function to Header */}
+            
             <Header onSearch={setSearchQuery} />
             <div className="container my-4">
                 <div className="row">
-                    {/* === Left Side: Filters === */}
+                   
                     <div className="col-md-3">
                         <div className="p-3 border rounded">
                             <h5>Filters</h5>
@@ -109,7 +108,7 @@ const ProductListingPage = () => {
                         </div>
                     </div>
 
-                    {/* === Right Side: Product List === */}
+                    
                     <div className="col-md-9">
                         {filteredProducts.length > 0 ? (
                             <div className="row">

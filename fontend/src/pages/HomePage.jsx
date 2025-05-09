@@ -1,11 +1,11 @@
 import useFetch from "../hooks/useFetch";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
+import { Link } from "react-router-dom"; 
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 import Header from "../components/Header";
 
 const HomePage = () => {
   const apiurl = useFetch("https://major-project-one-backend-eight.vercel.app/api/categories");
-  const { data, loading, error } = apiurl; // Destructure data, loading, and error from apiurl
+  const { data, loading, error } = apiurl; 
   
 
   if (loading) {
@@ -49,7 +49,7 @@ const HomePage = () => {
           <p>No categories available.</p>
         )}
   
-        {/* Niche wali badi image */}
+       
         <div className="my-5 text-center">
           <img
             src="https://placehold.co/1200x400?text=Big+Promotional+Image"
@@ -58,7 +58,7 @@ const HomePage = () => {
           />
         </div>
   
-        {/* New Arrival & Summer Collection Boxes */}
+       
         <div className="row text-center mb-5">
           <div className="col-md-6">
             <div className="p-4 border rounded shadow-sm bg-light">

@@ -1,13 +1,13 @@
 import React from "react";
 
 const Filters = ({ selectedSubCategories, setSelectedSubCategories, minRating, setMinRating, sortBy, setSortBy, clearFilters }) => {
-  const subCategoryList = ["Men", "Women"]; // ✅ Only Men & Women, Kids Removed
+  const subCategoryList = ["Men", "Women"];
 
   return (
     <div className="p-3 border rounded">
       <h5>Filters</h5>
 
-      {/* ✅ Sub-Category Filter */}
+
       <label>Sub-Categories:</label>
       {subCategoryList.map((subCategory) => (
         <div key={subCategory}>
@@ -26,7 +26,6 @@ const Filters = ({ selectedSubCategories, setSelectedSubCategories, minRating, s
         </div>
       ))}
 
-      {/* ✅ Rating Filter (Slider) */}
       <label className="mt-2">Minimum Rating:</label>
       <input
         type="range"
@@ -39,7 +38,7 @@ const Filters = ({ selectedSubCategories, setSelectedSubCategories, minRating, s
       />
       <p>Selected Rating: {minRating}</p>
 
-      {/* ✅ Sort by Price (Radio Buttons) */}
+
       <label className="mt-2">Sort by Price:</label>
       <div>
         <input type="radio" name="sortPrice" value="low-to-high" checked={sortBy === "low-to-high"} onChange={() => setSortBy("low-to-high")} /> Low to High
@@ -48,7 +47,7 @@ const Filters = ({ selectedSubCategories, setSelectedSubCategories, minRating, s
         <input type="radio" name="sortPrice" value="high-to-low" checked={sortBy === "high-to-low"} onChange={() => setSortBy("high-to-low")} /> High to Low
       </div>
 
-      {/* ✅ Clear Filters Button */}
+
       <button className="btn btn-danger w-100 mt-3" onClick={clearFilters}>Clear Filters</button>
     </div>
   );

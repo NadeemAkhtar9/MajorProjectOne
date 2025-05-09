@@ -23,13 +23,13 @@ const CheckoutPage = () => {
         let savedOrders = JSON.parse(localStorage.getItem("orderHistory")) || [];
     
         if (!Array.isArray(savedOrders)) {
-            savedOrders = []; //  Reset if invalid data found
+            savedOrders = []; 
         }
     
         savedOrders.push(newOrder);
-        localStorage.setItem("orderHistory", JSON.stringify(savedOrders)); //  Save orders properly
+        localStorage.setItem("orderHistory", JSON.stringify(savedOrders)); 
         
-        localStorage.setItem("cartItems", JSON.stringify([])); // Clear cart
+        localStorage.setItem("cartItems", JSON.stringify([]));
         setOrderPlaced(true);
     };
     

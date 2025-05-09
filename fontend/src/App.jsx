@@ -13,7 +13,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const App = () => {
-  const { data = [], loading, error } = useFetch("http://localhost:3000/api/products");
+  const { data = [], loading, error } = useFetch("https://major-project-one-backend-eight.vercel.app/api/products");
   const [cartItems, setCartItems] = useState(data);
   const [wishlistItems, setWishlistItems] = useState(data);
 

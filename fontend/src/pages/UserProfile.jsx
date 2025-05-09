@@ -27,16 +27,16 @@ const UserProfile = () => {
         }
     }, []);
 
-    //  Filter out invalid or malformed entries
+    
     const validOrders = orderHistory.filter(order =>
         order &&
         typeof order === "object" &&
         order.address &&
         order.date &&
-        Array.isArray(order.items) // Items can be empty or not
+        Array.isArray(order.items) 
     );
 
-    // Handle deleting an order
+    
     const handleDeleteOrder = (index) => {
         const updatedOrders = orderHistory.filter((_, i) => i !== index);
         localStorage.setItem("orderHistory", JSON.stringify(updatedOrders));
@@ -84,14 +84,14 @@ const UserProfile = () => {
             <div className="container my-4">
                 <h2>User Profile</h2>
 
-                {/*  Static User Info */}
+                
                 <div className="border p-3 mb-4">
                     <h5><strong>Name:</strong> {userData.name}</h5>
                     <p><strong>Email:</strong> {userData.email}</p>
                     <p><strong>Phone:</strong> {userData.phone}</p>
                 </div>
 
-                {/*  Saved Addresses */}
+                
                 <h4>Saved Addresses</h4>
                 {addresses.length > 0 ? (
                     addresses.map((addr, index) => (
@@ -111,7 +111,7 @@ const UserProfile = () => {
                     <p>No saved addresses.</p>
                 )}
 
-                {/*  Add / Edit Address */}
+               
                 <div className="mt-3">
                     <input
                         type="text"
@@ -127,7 +127,7 @@ const UserProfile = () => {
                     )}
                 </div>
 
-                {/*  Order History Section */}
+               
                 <h4 className="mt-4">Order History</h4>
                 {validOrders.length > 0 ? (
                     validOrders.map((order, index) => (
