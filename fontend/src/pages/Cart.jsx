@@ -23,14 +23,14 @@ const Cart = () => {
         <>
             <Header />
             <div className="container my-4">
-                <h2 className="text-center mb-4">Your Cart</h2>
+                <h2 className="text-center mb-4">Your Cart is here</h2>
 
                 <div className="row">
                     <div className="col-12 col-md-8">
                         {cartItems.length > 0 ? (
                             cartItems.map((product) => (
                                 <div key={product._id} className="card mb-4">
-                                    <div className="row g-0 align-items-center">
+                                    <div className="row g-0 align-items-stretch">
                                         <div className="col-md-4">
                                             <img src={product.imageUrl} alt={product.name} className="img-fluid rounded-start w-100 h-100" style={{ objectFit: "cover", maxHeight: "250px" }} />
                                         </div>

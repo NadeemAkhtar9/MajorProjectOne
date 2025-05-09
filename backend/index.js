@@ -9,7 +9,16 @@ const {initializeDatabase} = require("./db/db.connect")
 initializeDatabase()
 
 
-
+const productData = {
+    name:"Sofa",
+    price:14999,
+    description:"3 Seater Sofa set for Living Room Fabric.",
+    subCategories:"Furniture",
+    rating:3,
+    size:"XL",
+    imageUrl:"https://www.istockphoto.com/photo/poster-above-white-cabinet-with-plant-next-to-grey-sofa-in-simple-living-room-gm1031444360-276298364?utm_campaign=srp_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fsofa&utm_medium=affiliate&utm_source=unsplash&utm_term=sofa%3A%3A%3A",
+    categories:"6810a44e438dcee5a52ee572"
+} 
 
 const addProduct = async() => {
     try{
@@ -21,7 +30,7 @@ const addProduct = async() => {
         throw error
     }
 } 
-
+//addProduct()
 
 const readAllProducts = async() => {
     try{
