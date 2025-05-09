@@ -23,7 +23,7 @@ const Cart = () => {
         <>
             <Header />
             <div className="container my-4">
-                <h2 className="text-center mb-4">Your Cart is here</h2>
+                <h2 className="text-center mb-4">Your Cart</h2>
 
                 <div className="row">
                     <div className="col-12 col-md-8">
