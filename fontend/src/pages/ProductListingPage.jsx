@@ -9,7 +9,7 @@ import { CartContext } from "../context/CartContext";
 const ProductListingPage = () => {
     const { addToCart, addToWishlist } = useContext(CartContext);
     const { categoryId } = useParams();
-    const { data = [], loading, error } = useFetch("http://localhost:3000/api/products");
+    const { data = [], loading, error } = useFetch("https://major-project-one-backend-eight.vercel.app/api/products");
 
     const [minRating, setMinRating] = useState(0);
     const [sortBy, setSortBy] = useState("");

@@ -7,7 +7,7 @@ import { CartContext } from "../context/CartContext";
 
 const ProductDetailsPage = () => {
   const { productId } = useParams();
-  const { data: product, loading, error } = useFetch(`http://localhost:3000/api/products/${productId}`);
+  const { data: product, loading, error } = useFetch(`https://major-project-one-backend-eight.vercel.app/api/products/${productId}`);
   const {addToCart,addToWishlist} = useContext(CartContext)
 
   if (loading) return <p className="text-center">Loading product details...</p>;

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
 import Header from "../components/Header";
 
 const HomePage = () => {
-  const apiurl = useFetch("http://localhost:3000/api/categories");
+  const apiurl = useFetch("https://major-project-one-backend-eight.vercel.app/api/categories");
   const { data, loading, error } = apiurl; // Destructure data, loading, and error from apiurl
   
 
