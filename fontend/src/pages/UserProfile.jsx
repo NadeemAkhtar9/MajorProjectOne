@@ -92,7 +92,7 @@ const UserProfile = () => {
                 </div>
 
                 
-                <h4>Saved Addresses</h4>
+                <h4>Saved Address</h4>
                 {addresses.length > 0 ? (
                     addresses.map((addr, index) => (
                         <div key={index} className="border p-2 d-flex justify-content-between">
