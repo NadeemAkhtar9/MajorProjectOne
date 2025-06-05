@@ -108,7 +108,7 @@ const UserProfile = () => {
                         </div>
                     ))
                 ) : (
-                    <p>No saved addresses.</p>
+                    <p>No saved address.</p>
                 )}
 
                
